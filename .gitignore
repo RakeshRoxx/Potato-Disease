@@ -1,3 +1,25 @@
-./.idea,
-./.ipynb_checkpoints
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# dependencies
+/FrontPage/node_modules
+/FrontPage/.pnp
+.pnp.js
+/.ipynb_checkpoints
+/.idea
+
+# testing
+/FrontPage/coverage
+
+# production
+/FrontPage/build
+
+# misc
+/FrontPage.DS_Store
+/FrontPage.env.local
+/FrontPage.env.development.local
+/FrontPage.env.test.local
+/FrontPage.env.production.local
+
+/FrontPage/npm-debug.log*
+/FrontPage/yarn-debug.log*
+/FrontPage/yarn-error.log*

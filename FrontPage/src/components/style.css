@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-input{
+    margin-right: 30px;
+}
+.navigation{
+    margin-bottom: 50px;
+}
