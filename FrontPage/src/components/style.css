@@ -1,13 +1,30 @@
+.navstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+}
+
 .content{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .image-style{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
 }
 
 .file-input{

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./style.css";
 const axios = require("axios").default;
 function Dash() {
@@ -7,6 +7,10 @@ function Dash() {
   const [data, setData] = useState();
   const [image, setImage] = useState(false);
   const submitForm = async (event) => {
+    if (!image) {
+      alert("Please Select an Image");
+      return;
+    }
     event.preventDefault();
     const formData = new FormData();
     formData.append("file", selectedFile);
@@ -19,9 +23,6 @@ function Dash() {
       });
       if (response.status === 200) {
         setData(response.data);
-      } else {
-        // var result = "hello";
-        // console.log(result);
       }
     } catch (error) {
       console.log(error);
@@ -56,14 +57,16 @@ function Dash() {
                   <div className="container">
                     <div className="image-style">
                       <img
-                        src={URL.createObjectURL(image)}
+                        src={image && URL.createObjectURL(image)}
                         alt="file not found"
                       />
                     </div>
-                    <h4>
-                      <b>{confidence}</b>
-                    </h4>
-                    <p>{result}</p>
+                    <div className="details">
+                      <p>Disease Type - {result}</p>
+                    </div>
+                    <div className="details">
+                      <p>Confidence - {confidence}</p>
+                    </div>
                   </div>
                 </div>
               )}
